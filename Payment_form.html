@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Payment Page</title>
+    <link rel="icon" href="imgs\Polaris logo png.PNG"> <!--favicon-->
+    <link rel="stylesheet" href="Navbar.css">
+    <link rel="stylesheet" href="Payment.css">
+
+  </head>
+  <body >
+
+    <!--Navbar-->
+    <div>
+        <table class="navbar">
+            <tr>
+                <td style="font-size: larger;"><strong>Polaris</strong></td>
+                <td><a href="HomePage.html">Home</a></td>
+                <td><a href="Features.html">Features</a></td>
+                <td><a href="Pricing.html">Pricing</a></td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="right" id="clickableCell" style="color: white; width: auto; background-color: rgb(32, 112, 216); width: 200px; border: 1px solid #113bc621;"><a style="color: white;" href="SignInForm.html">Login</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <br>
+
+    <!--Form-->
+    <div class="container">
+        <form action="process2.php" method="post" onsubmit="return validateForm()">
+    
+            <div class="row">
+
+                <div class="col">
+    
+                    <h3 class="title">billing address</h3>
+    
+                    <div class="inputBox">
+                        <span>full name :</span>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>email :</span>
+                        <input type="email" id="email" name="email" placeholder="abcxyz@example.com" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>address :</span>
+                        <input type="text" id="addr" name="addr" placeholder="room - street - locality" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>city :</span>
+                        <input type="text" id="city" name="city"  placeholder="Mumbai" required>
+                    </div>
+    
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>state :</span>
+                            <input type="text" id="state" name="state" placeholder="Maharashtra" required>
+                        </div>
+                        <div class="inputBox">
+                            <span>zip code :</span>
+                            <input type="text" id="zip" name="zip"  placeholder="123 456" required>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div class="col">
+    
+                    <h3 class="title">payment</h3>
+    
+                    <div class="inputBox">
+                        <span>cards accepted :</span>
+                        <img src="imgs\15.png" alt="">
+                    </div>
+                    <div class="inputBox">
+                        <span>name on card :</span>
+                        <input type="text" id="cname" name="cname" placeholder="" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>credit card number :</span>
+                        <input type="text" id="cnum" name="cnum" placeholder="1111-2222-3333-4444" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>exp year, month :</span>
+                        <input type="month"  id="expm" name="expm" required>
+                    </div>
+    
+                    <div class="flex">
+                        <!-- <div class="inputBox">
+                            <span>exp year :</span>
+                            <input type="number" id="expy" name="expy" placeholder="2025" required>
+                        </div> -->
+                        <div class="inputBox">
+                            <span>CVV :</span>
+                            <input type="text" id="cvv" name="cvv" placeholder="1234" required>
+                        </div>
+                    </div>
+    
+                </div>
+        
+            </div>
+    
+            <input type="submit" class="submit-btn" value="proceed to checkout">
+    
+        </form>
+    
+    </div>    
+
+    <script>
+
+        function validateForm() {
+       
+            var email = document.getElementById("email").value;
+            var zip = document.getElementById("zip").value;
+            var cnum = document.getElementById("cnum").value;
+            var cvv = document.getElementById("cvv").value;
+      
+            var emailRegex = /^\S+@\S+\.\S+$/;
+            if (!email.match(emailRegex)) {
+                alert("Invalid email address.");
+                return false;
+            }
+            
+            if (zip.length != 6) {
+                alert("Invalid zip code");
+                return false;
+            }
+
+            const CNumregex = /^\d{4}-\d{4}-\d{4}-\d{4}$/;
+            if (!CNumregex.test(cnum)) {
+                alert("Invalid Card Number");
+                return false;
+            }
+
+            if (cvv.length != 4) {
+                alert("Invalid CVV");
+                return false;
+            }
+
+            return true; 
+        }
+
+        document.getElementById("clickableCell").addEventListener("click", function () {
+            window.location.href = "SignInForm.html";
+        });
+
+    </script>
+
+  </body>
+</html>

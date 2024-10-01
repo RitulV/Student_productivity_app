@@ -1,0 +1,25 @@
+table.navbar {
+    font-family: "Verdana", sans-serif;
+    font-size: medium;
+    width: 100%;
+    color: rgb(32, 112, 216);
+    /* background-color: white; */
+}
+
+table.navbar tr {
+    text-align: center;
+}
+
+table.navbar td {
+    padding: 10px;
+}
+
+table.navbar a {
+    text-decoration: none;
+    color: #2070d8;
+    font-weight:300 ;
+}
+
+table.navbar a:hover {
+    color: #021e9d;
+}

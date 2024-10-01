@@ -1,0 +1,48 @@
+body {
+    font-family: "Verdana", sans-serif; 
+    background-position: center top; 
+    background-size: cover; 
+    background-attachment: scroll;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 10px;
+    border-color: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 80%;
+    padding: 9px;
+    margin-top: 3px;
+    border-radius: 1px;
+    font-size: 16px;
+    background: none;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto; 
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}

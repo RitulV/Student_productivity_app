@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+.tabel{
+    background-color: dodgerblue;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.card{
+    flex:1;
+    max-width: 360px;
+    background-color: antiquewhite;
+    margin: 20px 10px;
+    text-align: center;
+    /* cursor: pointer; */
+    overflow: hidden;
+    color: #665a5a;
+    transition: .3s linear;
+}
+
+.card-header{
+    background-color: rgb(5, 33, 118);
+    display: inline-block;
+    color: aliceblue;
+    padding: 7px 20px;
+    border-radius: 0 0 20px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: .4s linear;
+}
+
+.card:hover .card-header{
+    box-shadow: 0 0 0 26em rgb(197, 103, 36);
+}
+
+.card:hover {
+    color: antiquewhite;
+}
+
+.up_buttn{
+    display: inline-block;
+    margin: 20px;
+    border: 2px solid coral;
+    background-color: #007BFF;
+    color:#fff;
+    padding: 4px 10px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: .3s linear;
+    cursor: pointer;
+}
+
+.up_buttn:hover{
+    background-color: rgba(37, 5, 118, 0.695);
+    color: #fff;
+}
+
+input[type="file"],
+input[type="submit"] {
+    display: inline-block;
+    margin: 20px;
+    border: 2px solid coral;
+    background-color: #007BFF;
+    color:#fff;
+    padding: 4px 10px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: .3s linear;
+    cursor: pointer;
+}
+
+input[type="file"]:hover{
+    background-color: rgba(37, 5, 118, 0.695);
+    color: #fff;
+}
+
+input[type="submit"]:hover{
+    background-color: rgba(37, 5, 118, 0.695);
+    color: #fff;
+}

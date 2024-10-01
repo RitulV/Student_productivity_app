@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Display Page</title>
+    <link rel="icon" href="imgs\Polaris logo png.PNG"> <!--favicon-->
+    <link rel="stylesheet" href="Navbar.css">
+    <link rel="stylesheet" href="displayfile.css">
+</head>
+<body>
+
+    <!--Navbar-->
+    <div>
+        <table class="navbar">
+            <tr>
+                <td style="font-size: larger;"><strong>Polaris</strong></td>
+                <td><a href="HomePage.html">Home</a></td>
+                <td><a href="Features.html">Features</a></td>
+                <td><a href="Pricing.html">Pricing</a></td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="right" id="clickableCell" style="color: white; width: auto; background-color: rgb(32, 112, 216); width: 200px; border: 1px solid #113bc621;"><a style="color: white;" href="SignInForm.html">Login</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="wrapper">
+        <h2 style="margin: 20px; padding: 20px; font-size: 28px; text-align: center; color: aliceblue;">Select the file you want to display</h2>
+        <input type="file" id="fileInput">
+        <textarea placeholder="This is where you will see your text file..." name="txtarea" id="txtarea" required></textarea>
+    </div>
+
+
+    <script>
+        document.getElementById("clickableCell").addEventListener("click", function () {
+            window.location.href = "SignInForm.html";
+        });
+
+        const textarea = document.querySelector("textarea");
+        textarea.addEventListener("keyup", e =>{
+            textarea.style.height = "auto";
+            let scHeight = e.target.scrollHeight;
+            textarea.style.height = `${scHeight}px`;
+        })
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const fileInput = document.getElementById('fileInput');
+            const textOutput = document.getElementById('txtarea');
+
+            fileInput.addEventListener('change', function() {
+                const file = fileInput.files[0];
+
+                if (file) {
+                    const reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        textOutput.value = e.target.result;
+                    };
+
+                    reader.readAsText(file);
+                } else {
+                    textOutput.value = ''; // Clear the textarea if no file is selected
+                }
+            });
+        });
+
+    </script>
+    
+</body>
+</html>

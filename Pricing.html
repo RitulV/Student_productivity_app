@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Plan Page</title>
+    <link rel="icon" href="imgs\Polaris logo png.PNG"> <!--favicon-->
+    <link rel="stylesheet" href="Navbar.css">
+    <link rel="stylesheet" href="Pricing.css">
+</head>
+<body>
+
+    <!--Navbar-->
+    <div>
+        <table class="navbar">
+            <tr>
+                <td style="font-size: larger;"><strong>Polaris</strong></td>
+                <td><a href="HomePage.html">Home</a></td>
+                <td><a href="Features.html">Features</a></td>
+                <td><a href="Pricing.html">Pricing</a></td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="right" id="clickableCell" style="color: white; width: auto; background-color: rgb(32, 112, 216); width: 200px; border: 1px solid #113bc621;"><a style="color: white;" href="SignInForm.html">Login</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container">
+        <h2>Choose a plan that is best for you!</h2>
+        <div class="price-row">
+
+            <div class="price-col">
+                <p>Starter</p>
+                <h3>Rs.0 <span>/ user / month</span></h3>
+                <ul class="no-bullets">
+                    <li>Unlimited files in draft</li>
+                    <li>Unlimited viewers and commenters</li>
+                    <li>Unlimited editors on 3 team files</li>
+                    <li>10GB cloud storage</li>
+                </ul>
+                <button  name="free" id="free" onclick="tryfree()">Try free</button>
+                <!-- <button>Get Started</button> -->
+            </div>
+
+            <div class="price-col">
+                <p>Professional</p>
+                <h3>Rs.749 <span>/ user / month</span></h3>
+                <h3><span>Requires minimum 2 members / team</span></h3>
+                <ul class="no-bullets">
+                    <li>Unlimited files in draft</li>
+                    <li>Unlimited viewers and commenters</li>
+                    <li>Unlimited editors on 3 team files</li>
+                    <li>1 team project</li>
+                    <li>30-day version history</li>
+                    <li>75GB cloud storage</li>
+                </ul>
+                <button name="prof" id="prof" onclick="redirect()">Buy now</button>
+            </div>
+
+            <div class="price-col">
+                <p>Premium</p>
+                <h3>Rs.999 <span>/ user / month</span></h3>
+                <h3><span>Requires minimum 3 members / team</span></h3>
+                <ul class="no-bullets">
+                    <li>Unlimited files in draft</li>
+                    <li>Unlimited viewers and commenters</li>
+                    <li>Unlimited editors on 3 team files</li>
+                    <li>1 team project</li>
+                    <li>30-day version history</li>
+                    <li>200GB cloud storage</li>
+                </ul>
+                <button name="prem" id="prem" onclick="redirect()">Buy now</button>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <script>
+        function redirect(){
+            window.location.href = "Payment_form.html";
+        }
+
+        function tryfree(){
+            window.location.href = "Features.html";
+        }
+
+        document.getElementById("clickableCell").addEventListener("click", function () {
+            window.location.href = "SignInForm.html";
+        });
+    </script>
+  
+    
+</body>
+</html>

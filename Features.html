@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Page</title>
+    <link rel="icon" href="imgs\Polaris logo png.PNG"> <!--favicon-->
+    <link rel="stylesheet" href="Navbar.css">
+    <link rel="stylesheet" href="Features.css">
+
+</head>
+<body>
+
+    <!--Navbar-->
+    <div>
+        <table class="navbar">
+            <tr>
+                <td style="font-size: larger;"><strong>Polaris</strong></td>
+                <td><a href="HomePage.html">Home</a></td>
+                <td><a href="Features.html">Features</a></td>
+                <td><a href="Pricing.html">Pricing</a></td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="empty_cell">&nbsp;</td>
+                <td class="right" id="clickableCell" style="color: white; width: auto; background-color: rgb(32, 112, 216); width: 200px; border: 1px solid #113bc621;"><a style="color: white;" href="SignInForm.html">Login</a></td>
+            </tr>
+        </table>
+    </div>
+    
+    <!-- this is the table with the different cards -->
+    <div class="tabel">
+
+        <div class="card">
+            <h3 class="card-header">File</h3>
+            <p>Upload your file here</p>
+            <form action="file_upload.php" method="post" enctype="multipart/form-data">
+                <br>
+                Select a file to upload:
+                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input type="submit" value="Upload File" name="submit">
+            </form>
+        </div>
+
+        <div class="card">
+            <h3 class="card-header">File reader</h3>
+            <p>Upload your your file and see its contents</p>
+            <button class="up_buttn" id="filerdr">Go there</button>
+        </div>
+
+        <div class="card">
+            <h3 class="card-header">Text editor</h3>
+            <p>A beautiul text editor to boost your productivity</p>
+            <button class="up_buttn" id="txtedtr">Go there</button>
+        </div>
+
+    </div>
+
+    <div class="tabel">
+
+        <div class="card">
+            <h3 class="card-header">File read</h3>
+            <p>Upload the file that you want to read here</p>
+            <form action="reapfile.php" method="post" enctype="multipart/form-data">
+                <!-- <button class="up_buttn">Upload</button> -->
+                <br>
+                Select a file to upload:
+                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input type="submit" value="Upload File" name="submit">
+            </form>
+        </div>
+
+        <div class="card">
+            <h3 class="card-header">XML</h3>
+            <p>Upload your xml file here</p>
+            <button class="up_buttn" id="xml">Upload</button>
+        </div>
+
+        <div class="card">
+            <h3 class="card-header">JSON</h3>
+            <p>Upload your json file here</p>
+            <button class="up_buttn" id="json">Upload</button>
+        </div>
+
+
+    </div>
+
+    <script>
+        document.getElementById("clickableCell").addEventListener("click", function () {
+            window.location.href = "SignInForm.html";
+        });
+
+        document.getElementById("filerdr").addEventListener("click", function() {
+            // Redirect to another HTML page
+            window.location.href = "displayfile.html";
+        });
+
+        document.getElementById("txtedtr").addEventListener("click", function() {
+            // Redirect to another HTML page
+            window.location.href = "AutoSizeFrame.html";
+        });
+
+        document.getElementById("xml").addEventListener("click", function() {
+            // Redirect to another HTML page
+            window.location.href = "sorry.html";
+        });
+
+        document.getElementById("json").addEventListener("click", function() {
+            // Redirect to another HTML page
+            window.location.href = "sorry.html";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    transition: all .2s linear;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#183ba3, rgb(137, 40, 202));
+}
+
+.container h1{
+    font-size: 50px;
+    color: aliceblue;
+}
